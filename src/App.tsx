@@ -18,6 +18,7 @@ import BannerPopup from "./components/BannerPopup";
 import AllCategories from "./pages/AllCategories";
 import SingleCategory from "./pages/SingleCategory";
 import SearchPage from "./pages/SearchPage";
+import AIChatWidget from "./components/AIChatWidget";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
       <LoginModal />
       <ScrollToTopButton />
       <BannerPopup />
+      <AIChatWidget />
     </Provider>
   );
 }

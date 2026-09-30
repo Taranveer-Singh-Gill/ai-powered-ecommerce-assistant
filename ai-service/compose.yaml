@@ -1,0 +1,17 @@
+services:
+  ai-service:
+    build: .
+    container_name: commerce-ai
+
+    env_file:
+      - .env
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - commerce-ai-chroma:/app/chroma_db
+
+volumes:
+  commerce-ai-chroma:
+    external: true
