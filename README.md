@@ -2,6 +2,14 @@
 
 An AI-powered e-commerce application that combines a React storefront with a FastAPI recommendation service. The assistant understands natural-language shopping requests, performs semantic product retrieval using ChromaDB, applies structured constraints, reranks relevant products with an LLM, and returns grounded recommendations directly in the shopping interface.
 
+## Live Demo
+
+🌐 **Application:** [Launch Live App](https://ai-powered-ecommerce-assistant-frontend.onrender.com)
+
+📚 **API Documentation:** [View Swagger API Docs](https://ai-powered-ecommerce-assistant.onrender.com/docs)
+
+> **Note:** The application is hosted on Render's free tier, so the AI service may take up to a minute to respond after a period of inactivity.
+
 ## Demo
 
 ### Natural-Language Shopping Assistant
