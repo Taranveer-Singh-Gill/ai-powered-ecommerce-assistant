@@ -2,6 +2,32 @@
 
 An AI-powered e-commerce application that combines a React storefront with a FastAPI recommendation service. The assistant understands natural-language shopping requests, performs semantic product retrieval using ChromaDB, applies structured constraints, reranks relevant products with an LLM, and returns grounded recommendations directly in the shopping interface.
 
+## Demo
+
+### Natural-Language Shopping Assistant
+
+Users can describe what they are looking for in plain English. The assistant extracts shopping constraints and generates a grounded recommendation from the product catalog.
+
+![AI Shopping Assistant](docs/screenshots/ai-chat-query.png)
+
+### AI Product Recommendations
+
+Retrieved products are displayed directly in the storefront with product images, prices, ratings, stock availability, and links to product pages.
+
+![AI Product Recommendations](docs/screenshots/ai-product-recommendations.png)
+
+### FastAPI Backend
+
+The AI service exposes REST endpoints for product access, conversational AI, structured intent extraction, RAG-based recommendations, and service health monitoring through FastAPI.
+
+![FastAPI Backend API](docs/screenshots/fastapi-api-overview.png)
+
+### API Schemas
+
+FastAPI automatically generates interactive OpenAPI documentation and request/response schemas for components such as `ChatRequest` and `ShoppingIntent`.
+
+![FastAPI API Schemas](docs/screenshots/fastapi-api-schemas.png)
+
 ## Features
 
 - Natural-language AI shopping assistant integrated into the storefront
