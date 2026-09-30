@@ -1,15 +1,24 @@
+
 import chromadb
+from chromadb.utils.embedding_functions import OpenAIEmbeddingFunction
+
 from app.services.product_service import get_products
 
 
-# Store the vector database locally
-client = chromadb.PersistentClient(path="./chroma_db")
-
-# Create the collection if it doesn't exist
-collection = client.get_or_create_collection(
-    name="products"
+# Use OpenAI embeddings instead of Chroma's local embedding model.
+embedding_function = OpenAIEmbeddingFunction(
+    api_key_env_var="OPENAI_API_KEY",
+    model_name="text-embedding-3-small",
 )
 
+# Store the vector database locally.
+client = chromadb.PersistentClient(path="./chroma_db")
+
+# Create the collection using the lightweight OpenAI embedding function.
+collection = client.get_or_create_collection(
+    name="products",
+    embedding_function=embedding_function,
+)
 
 async def index_products():
     products = await get_products(limit=0)
